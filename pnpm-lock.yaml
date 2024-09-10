@@ -1,0 +1,1357 @@
+lockfileVersion: '6.0'
+
+importers:
+
+  .: {}
+
+  packages/webpack-simple-plugin:
+    devDependencies:
+      cross-env:
+        specifier: ^7.0.3
+        version: artifactory.devops.xiaohongshu.com/cross-env@7.0.3
+      html-webpack-plugin:
+        specifier: ^5.6.0
+        version: artifactory.devops.xiaohongshu.com/html-webpack-plugin@5.6.0(webpack@5.94.0)
+      webpack:
+        specifier: ^5.94.0
+        version: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+      webpack-cli:
+        specifier: ^5.1.4
+        version: artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0)
+
+packages:
+
+  /@xtuc/long@4.2.2:
+    resolution: {integrity: sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0=, tarball: http://npm.devops.xiaohongshu.com:7001/@xtuc/long/download/@xtuc/long-4.2.2.tgz}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@discoveryjs/json-ext@0.5.7:
+    resolution: {integrity: sha1-HVcr+74Ut3BOC6Dzm3SBW4SHDXA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@discoveryjs/json-ext/download/@discoveryjs/json-ext-0.5.7.tgz}
+    name: '@discoveryjs/json-ext'
+    version: 0.5.7
+    engines: {node: '>=10.0.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/gen-mapping@0.3.5:
+    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz}
+    name: '@jridgewell/gen-mapping'
+    version: 0.3.5
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@jridgewell/set-array': artifactory.devops.xiaohongshu.com/@jridgewell/set-array@1.2.1
+      '@jridgewell/sourcemap-codec': artifactory.devops.xiaohongshu.com/@jridgewell/sourcemap-codec@1.5.0
+      '@jridgewell/trace-mapping': artifactory.devops.xiaohongshu.com/@jridgewell/trace-mapping@0.3.25
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/resolve-uri@3.1.2:
+    resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz}
+    name: '@jridgewell/resolve-uri'
+    version: 3.1.2
+    engines: {node: '>=6.0.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/set-array@1.2.1:
+    resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/set-array/-/set-array-1.2.1.tgz}
+    name: '@jridgewell/set-array'
+    version: 1.2.1
+    engines: {node: '>=6.0.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/source-map@0.3.6:
+    resolution: {integrity: sha512-1ZJTZebgqllO79ue2bm3rIGud/bOe0pP5BjSRCRxxYkEZS8STV7zN84UBbiYu7jy+eCKSnVIUgoWWE/tt+shMQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/source-map/-/source-map-0.3.6.tgz}
+    name: '@jridgewell/source-map'
+    version: 0.3.6
+    dependencies:
+      '@jridgewell/gen-mapping': artifactory.devops.xiaohongshu.com/@jridgewell/gen-mapping@0.3.5
+      '@jridgewell/trace-mapping': artifactory.devops.xiaohongshu.com/@jridgewell/trace-mapping@0.3.25
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/sourcemap-codec@1.5.0:
+    resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.0.tgz}
+    name: '@jridgewell/sourcemap-codec'
+    version: 1.5.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@jridgewell/trace-mapping@0.3.25:
+    resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@jridgewell/trace-mapping/-/trace-mapping-0.3.25.tgz}
+    name: '@jridgewell/trace-mapping'
+    version: 0.3.25
+    dependencies:
+      '@jridgewell/resolve-uri': artifactory.devops.xiaohongshu.com/@jridgewell/resolve-uri@3.1.2
+      '@jridgewell/sourcemap-codec': artifactory.devops.xiaohongshu.com/@jridgewell/sourcemap-codec@1.5.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@types/estree@1.0.5:
+    resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@types/estree/-/estree-1.0.5.tgz}
+    name: '@types/estree'
+    version: 1.0.5
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@types/html-minifier-terser@6.1.0:
+    resolution: {integrity: sha1-T8M6AMHQwWmHsaIM+S0gYUxVrDU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@types/html-minifier-terser/download/@types/html-minifier-terser-6.1.0.tgz}
+    name: '@types/html-minifier-terser'
+    version: 6.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@types/json-schema@7.0.15:
+    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@types/json-schema/-/json-schema-7.0.15.tgz}
+    name: '@types/json-schema'
+    version: 7.0.15
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@types/node@22.5.4:
+    resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@types/node/-/node-22.5.4.tgz}
+    name: '@types/node'
+    version: 22.5.4
+    dependencies:
+      undici-types: artifactory.devops.xiaohongshu.com/undici-types@6.19.8
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1:
+    resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/ast/-/ast-1.12.1.tgz}
+    name: '@webassemblyjs/ast'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/helper-numbers': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-numbers@1.11.6
+      '@webassemblyjs/helper-wasm-bytecode': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/floating-point-hex-parser@1.11.6:
+    resolution: {integrity: sha1-2svLla/xNcgmD3f6O0xf6mAKZDE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/floating-point-hex-parser/download/@webassemblyjs/floating-point-hex-parser-1.11.6.tgz}
+    name: '@webassemblyjs/floating-point-hex-parser'
+    version: 1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-api-error@1.11.6:
+    resolution: {integrity: sha1-YTL2jErNWdzRQcRLGMvrvZ8vp2g=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/helper-api-error/download/@webassemblyjs/helper-api-error-1.11.6.tgz}
+    name: '@webassemblyjs/helper-api-error'
+    version: 1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-buffer@1.12.1:
+    resolution: {integrity: sha512-nzJwQw99DNDKr9BVCOZcLuJJUlqkJh+kVzVl6Fmq/tI5ZtEyWT1KZMyOXltXLZJmDtvLCDgwsyrkohEtopTXCw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/helper-buffer/-/helper-buffer-1.12.1.tgz}
+    name: '@webassemblyjs/helper-buffer'
+    version: 1.12.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-numbers@1.11.6:
+    resolution: {integrity: sha1-y85efgwb0yz0kFrkRO9kzqkZ8bU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/helper-numbers/download/@webassemblyjs/helper-numbers-1.11.6.tgz}
+    name: '@webassemblyjs/helper-numbers'
+    version: 1.11.6
+    dependencies:
+      '@webassemblyjs/floating-point-hex-parser': artifactory.devops.xiaohongshu.com/@webassemblyjs/floating-point-hex-parser@1.11.6
+      '@webassemblyjs/helper-api-error': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-api-error@1.11.6
+      '@xtuc/long': 4.2.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6:
+    resolution: {integrity: sha1-uy69s7g6om2bqtTEbUMVKDrNUek=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/helper-wasm-bytecode/download/@webassemblyjs/helper-wasm-bytecode-1.11.6.tgz}
+    name: '@webassemblyjs/helper-wasm-bytecode'
+    version: 1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-section@1.12.1:
+    resolution: {integrity: sha512-Jif4vfB6FJlUlSbgEMHUyk1j234GTNG9dBJ4XJdOySoj518Xj0oGsNi59cUQF4RRMS9ouBUxDDdyBVfPTypa5g==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.12.1.tgz}
+    name: '@webassemblyjs/helper-wasm-section'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/helper-buffer': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-buffer@1.12.1
+      '@webassemblyjs/helper-wasm-bytecode': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6
+      '@webassemblyjs/wasm-gen': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-gen@1.12.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/ieee754@1.11.6:
+    resolution: {integrity: sha1-u2ZckdCxT//OsOOCmMMprwQ8bjo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/ieee754/download/@webassemblyjs/ieee754-1.11.6.tgz}
+    name: '@webassemblyjs/ieee754'
+    version: 1.11.6
+    dependencies:
+      '@xtuc/ieee754': artifactory.devops.xiaohongshu.com/@xtuc/ieee754@1.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/leb128@1.11.6:
+    resolution: {integrity: sha1-cOYOXoL5rIERi8JTgaCyg4kyQNc=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/leb128/download/@webassemblyjs/leb128-1.11.6.tgz}
+    name: '@webassemblyjs/leb128'
+    version: 1.11.6
+    dependencies:
+      '@xtuc/long': 4.2.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/utf8@1.11.6:
+    resolution: {integrity: sha1-kPi8NMVhWV/hVmA75yU8280Pq1o=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/utf8/download/@webassemblyjs/utf8-1.11.6.tgz}
+    name: '@webassemblyjs/utf8'
+    version: 1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-edit@1.12.1:
+    resolution: {integrity: sha512-1DuwbVvADvS5mGnXbE+c9NfA8QRcZ6iKquqjjmR10k6o+zzsRVesil54DKexiowcFCPdr/Q0qaMgB01+SQ1u6g==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/wasm-edit/-/wasm-edit-1.12.1.tgz}
+    name: '@webassemblyjs/wasm-edit'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/helper-buffer': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-buffer@1.12.1
+      '@webassemblyjs/helper-wasm-bytecode': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6
+      '@webassemblyjs/helper-wasm-section': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-section@1.12.1
+      '@webassemblyjs/wasm-gen': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-gen@1.12.1
+      '@webassemblyjs/wasm-opt': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-opt@1.12.1
+      '@webassemblyjs/wasm-parser': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-parser@1.12.1
+      '@webassemblyjs/wast-printer': artifactory.devops.xiaohongshu.com/@webassemblyjs/wast-printer@1.12.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-gen@1.12.1:
+    resolution: {integrity: sha512-TDq4Ojh9fcohAw6OIMXqiIcTq5KUXTGRkVxbSo1hQnSy6lAM5GSdfwWeSxpAo0YzgsgF182E/U0mDNhuA0tW7w==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/wasm-gen/-/wasm-gen-1.12.1.tgz}
+    name: '@webassemblyjs/wasm-gen'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/helper-wasm-bytecode': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6
+      '@webassemblyjs/ieee754': artifactory.devops.xiaohongshu.com/@webassemblyjs/ieee754@1.11.6
+      '@webassemblyjs/leb128': artifactory.devops.xiaohongshu.com/@webassemblyjs/leb128@1.11.6
+      '@webassemblyjs/utf8': artifactory.devops.xiaohongshu.com/@webassemblyjs/utf8@1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-opt@1.12.1:
+    resolution: {integrity: sha512-Jg99j/2gG2iaz3hijw857AVYekZe2SAskcqlWIZXjji5WStnOpVoat3gQfT/Q5tb2djnCjBtMocY/Su1GfxPBg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/wasm-opt/-/wasm-opt-1.12.1.tgz}
+    name: '@webassemblyjs/wasm-opt'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/helper-buffer': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-buffer@1.12.1
+      '@webassemblyjs/wasm-gen': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-gen@1.12.1
+      '@webassemblyjs/wasm-parser': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-parser@1.12.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-parser@1.12.1:
+    resolution: {integrity: sha512-xikIi7c2FHXysxXe3COrVUPSheuBtpcfhbpFj4gmu7KRLYOzANztwUU0IbsqvMqzuNK2+glRGWCEqZo1WCLyAQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/wasm-parser/-/wasm-parser-1.12.1.tgz}
+    name: '@webassemblyjs/wasm-parser'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/helper-api-error': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-api-error@1.11.6
+      '@webassemblyjs/helper-wasm-bytecode': artifactory.devops.xiaohongshu.com/@webassemblyjs/helper-wasm-bytecode@1.11.6
+      '@webassemblyjs/ieee754': artifactory.devops.xiaohongshu.com/@webassemblyjs/ieee754@1.11.6
+      '@webassemblyjs/leb128': artifactory.devops.xiaohongshu.com/@webassemblyjs/leb128@1.11.6
+      '@webassemblyjs/utf8': artifactory.devops.xiaohongshu.com/@webassemblyjs/utf8@1.11.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webassemblyjs/wast-printer@1.12.1:
+    resolution: {integrity: sha512-+X4WAlOisVWQMikjbcvY2e0rwPsKQ9F688lksZhBcPycBBuii3O7m8FACbDMWDojpAqvjIncrG8J0XHKyQfVeA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webassemblyjs/wast-printer/-/wast-printer-1.12.1.tgz}
+    name: '@webassemblyjs/wast-printer'
+    version: 1.12.1
+    dependencies:
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@xtuc/long': 4.2.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.94.0):
+    resolution: {integrity: sha1-Oy+FLpHaxuO4X7KjFPuL70bZRkY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webpack-cli/configtest/download/@webpack-cli/configtest-2.1.1.tgz}
+    id: artifactory.devops.xiaohongshu.com/@webpack-cli/configtest/2.1.1
+    name: '@webpack-cli/configtest'
+    version: 2.1.1
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+    dependencies:
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+      webpack-cli: artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.94.0):
+    resolution: {integrity: sha1-zD+/Iu/riP9iMQz4hcWwn0SuD90=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webpack-cli/info/download/@webpack-cli/info-2.0.2.tgz}
+    id: artifactory.devops.xiaohongshu.com/@webpack-cli/info/2.0.2
+    name: '@webpack-cli/info'
+    version: 2.0.2
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+    dependencies:
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+      webpack-cli: artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.94.0):
+    resolution: {integrity: sha1-Ml20I5XNSf5sFAV/mpAOQn34gQ4=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@webpack-cli/serve/download/@webpack-cli/serve-2.0.5.tgz}
+    id: artifactory.devops.xiaohongshu.com/@webpack-cli/serve/2.0.5
+    name: '@webpack-cli/serve'
+    version: 2.0.5
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+      webpack-dev-server: '*'
+    peerDependenciesMeta:
+      webpack-dev-server:
+        optional: true
+    dependencies:
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+      webpack-cli: artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/@xtuc/ieee754@1.2.0:
+    resolution: {integrity: sha1-7vAUoxRa5Hehy8AM0eVSM23Ot5A=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@xtuc/ieee754/download/@xtuc/ieee754-1.2.0.tgz}
+    name: '@xtuc/ieee754'
+    version: 1.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/acorn-import-attributes@1.9.5(acorn@8.12.1):
+    resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/acorn-import-attributes/-/acorn-import-attributes-1.9.5.tgz}
+    id: artifactory.devops.xiaohongshu.com/acorn-import-attributes/1.9.5
+    name: acorn-import-attributes
+    version: 1.9.5
+    peerDependencies:
+      acorn: ^8
+    dependencies:
+      acorn: artifactory.devops.xiaohongshu.com/acorn@8.12.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/acorn/-/acorn-8.12.1.tgz}
+    name: acorn
+    version: 8.12.1
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/ajv-keywords@3.5.2(ajv@6.12.6):
+    resolution: {integrity: sha1-MfKdpatuANHC0yms97WSlhTVAU0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/ajv-keywords/download/ajv-keywords-3.5.2.tgz}
+    id: artifactory.devops.xiaohongshu.com/ajv-keywords/3.5.2
+    name: ajv-keywords
+    version: 3.5.2
+    peerDependencies:
+      ajv: ^6.9.1
+    dependencies:
+      ajv: artifactory.devops.xiaohongshu.com/ajv@6.12.6
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/ajv@6.12.6:
+    resolution: {integrity: sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/ajv/download/ajv-6.12.6.tgz}
+    name: ajv
+    version: 6.12.6
+    dependencies:
+      fast-deep-equal: artifactory.devops.xiaohongshu.com/fast-deep-equal@3.1.3
+      fast-json-stable-stringify: artifactory.devops.xiaohongshu.com/fast-json-stable-stringify@2.1.0
+      json-schema-traverse: artifactory.devops.xiaohongshu.com/json-schema-traverse@0.4.1
+      uri-js: artifactory.devops.xiaohongshu.com/uri-js@4.4.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/ansi-regex@5.0.1:
+    resolution: {integrity: sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/ansi-regex/download/ansi-regex-5.0.1.tgz}
+    name: ansi-regex
+    version: 5.0.1
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/boolbase@1.0.0:
+    resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/boolbase/download/boolbase-1.0.0.tgz}
+    name: boolbase
+    version: 1.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/browserslist@4.23.3:
+    resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/browserslist/-/browserslist-4.23.3.tgz}
+    name: browserslist
+    version: 4.23.3
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: artifactory.devops.xiaohongshu.com/caniuse-lite@1.0.30001660
+      electron-to-chromium: artifactory.devops.xiaohongshu.com/electron-to-chromium@1.5.18
+      node-releases: artifactory.devops.xiaohongshu.com/node-releases@2.0.18
+      update-browserslist-db: artifactory.devops.xiaohongshu.com/update-browserslist-db@1.1.0(browserslist@4.23.3)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/buffer-from@1.1.2:
+    resolution: {integrity: sha1-KxRqb9cugLT1XSVfNe1Zo6mkG9U=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/buffer-from/download/buffer-from-1.1.2.tgz}
+    name: buffer-from
+    version: 1.1.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/camel-case@4.1.2:
+    resolution: {integrity: sha1-lygHKpVPgFIoIlpt7qazhGHhvVo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/camel-case/download/camel-case-4.1.2.tgz}
+    name: camel-case
+    version: 4.1.2
+    dependencies:
+      pascal-case: artifactory.devops.xiaohongshu.com/pascal-case@3.1.2
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/caniuse-lite@1.0.30001660:
+    resolution: {integrity: sha512-GacvNTTuATm26qC74pt+ad1fW15mlQ/zuTzzY1ZoIzECTP8HURDfF43kNxPgf7H1jmelCBQTTbBNxdSXOA7Bqg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/caniuse-lite/-/caniuse-lite-1.0.30001660.tgz}
+    name: caniuse-lite
+    version: 1.0.30001660
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/chrome-trace-event@1.0.4:
+    resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/chrome-trace-event/-/chrome-trace-event-1.0.4.tgz}
+    name: chrome-trace-event
+    version: 1.0.4
+    engines: {node: '>=6.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/clean-css@5.3.3:
+    resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/clean-css/-/clean-css-5.3.3.tgz}
+    name: clean-css
+    version: 5.3.3
+    engines: {node: '>= 10.0'}
+    dependencies:
+      source-map: artifactory.devops.xiaohongshu.com/source-map@0.6.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/clone-deep@4.0.1:
+    resolution: {integrity: sha1-wZ/Zvbv4WUK0/ZechNz31fB8I4c=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/clone-deep/download/clone-deep-4.0.1.tgz}
+    name: clone-deep
+    version: 4.0.1
+    engines: {node: '>=6'}
+    dependencies:
+      is-plain-object: artifactory.devops.xiaohongshu.com/is-plain-object@2.0.4
+      kind-of: artifactory.devops.xiaohongshu.com/kind-of@6.0.3
+      shallow-clone: artifactory.devops.xiaohongshu.com/shallow-clone@3.0.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/colorette@2.0.20:
+    resolution: {integrity: sha1-nreT5oMwZ/cjWQL807CZF6AAqVo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/colorette/download/colorette-2.0.20.tgz}
+    name: colorette
+    version: 2.0.20
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/commander@10.0.1:
+    resolution: {integrity: sha1-iB7ka0930cHczFgjQzqjmwIsvgY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/commander/download/commander-10.0.1.tgz}
+    name: commander
+    version: 10.0.1
+    engines: {node: '>=14'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/commander@2.20.3:
+    resolution: {integrity: sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/commander/download/commander-2.20.3.tgz}
+    name: commander
+    version: 2.20.3
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/commander@8.3.0:
+    resolution: {integrity: sha1-SDfqGy2me5xhamevuw+v7lZ7ymY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/commander/download/commander-8.3.0.tgz}
+    name: commander
+    version: 8.3.0
+    engines: {node: '>= 12'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/cross-env@7.0.3:
+    resolution: {integrity: sha1-hlJkspZ33AFbqEGJGJZd0jL8VM8=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/cross-env/download/cross-env-7.0.3.tgz}
+    name: cross-env
+    version: 7.0.3
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: artifactory.devops.xiaohongshu.com/cross-spawn@7.0.3
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/cross-spawn@7.0.3:
+    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/cross-spawn/download/cross-spawn-7.0.3.tgz}
+    name: cross-spawn
+    version: 7.0.3
+    engines: {node: '>= 8'}
+    dependencies:
+      path-key: artifactory.devops.xiaohongshu.com/path-key@3.1.1
+      shebang-command: artifactory.devops.xiaohongshu.com/shebang-command@2.0.0
+      which: artifactory.devops.xiaohongshu.com/which@2.0.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/css-select@4.3.0:
+    resolution: {integrity: sha1-23EpsoRmYv2GKM/ElquytZ5BUps=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/css-select/download/css-select-4.3.0.tgz}
+    name: css-select
+    version: 4.3.0
+    dependencies:
+      boolbase: artifactory.devops.xiaohongshu.com/boolbase@1.0.0
+      css-what: artifactory.devops.xiaohongshu.com/css-what@6.1.0
+      domhandler: artifactory.devops.xiaohongshu.com/domhandler@4.3.1
+      domutils: artifactory.devops.xiaohongshu.com/domutils@2.8.0
+      nth-check: artifactory.devops.xiaohongshu.com/nth-check@2.1.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/css-what@6.1.0:
+    resolution: {integrity: sha1-+17/z3bx3eosgb36pN5E55uscPQ=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/css-what/download/css-what-6.1.0.tgz}
+    name: css-what
+    version: 6.1.0
+    engines: {node: '>= 6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/dom-converter@0.2.0:
+    resolution: {integrity: sha1-ZyGp2u4uKTaClVtq/kFncWJ7t2g=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/dom-converter/download/dom-converter-0.2.0.tgz}
+    name: dom-converter
+    version: 0.2.0
+    dependencies:
+      utila: artifactory.devops.xiaohongshu.com/utila@0.4.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/dom-serializer@1.4.1:
+    resolution: {integrity: sha1-3l1Bsa6ikCFdxFptrorc8dMuLTA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/dom-serializer/download/dom-serializer-1.4.1.tgz}
+    name: dom-serializer
+    version: 1.4.1
+    dependencies:
+      domelementtype: artifactory.devops.xiaohongshu.com/domelementtype@2.3.0
+      domhandler: artifactory.devops.xiaohongshu.com/domhandler@4.3.1
+      entities: artifactory.devops.xiaohongshu.com/entities@2.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/domelementtype@2.3.0:
+    resolution: {integrity: sha1-XEXo6GmVJiYzHXqrMm0B2vZdWJ0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/domelementtype/download/domelementtype-2.3.0.tgz}
+    name: domelementtype
+    version: 2.3.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/domhandler@4.3.1:
+    resolution: {integrity: sha1-jXkgM0FvWdaLwDpap7AYwcqJJ5w=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/domhandler/download/domhandler-4.3.1.tgz}
+    name: domhandler
+    version: 4.3.1
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: artifactory.devops.xiaohongshu.com/domelementtype@2.3.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/domutils@2.8.0:
+    resolution: {integrity: sha1-RDfe9dtuLR9dbuhZvZXKfQIEgTU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/domutils/download/domutils-2.8.0.tgz}
+    name: domutils
+    version: 2.8.0
+    dependencies:
+      dom-serializer: artifactory.devops.xiaohongshu.com/dom-serializer@1.4.1
+      domelementtype: artifactory.devops.xiaohongshu.com/domelementtype@2.3.0
+      domhandler: artifactory.devops.xiaohongshu.com/domhandler@4.3.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/dot-case@3.0.4:
+    resolution: {integrity: sha1-mytnDQCkMWZ6inW6Kc0bmICc51E=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/dot-case/download/dot-case-3.0.4.tgz}
+    name: dot-case
+    version: 3.0.4
+    dependencies:
+      no-case: artifactory.devops.xiaohongshu.com/no-case@3.0.4
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/electron-to-chromium@1.5.18:
+    resolution: {integrity: sha512-1OfuVACu+zKlmjsNdcJuVQuVE61sZOLbNM4JAQ1Rvh6EOj0/EUKhMJjRH73InPlXSh8HIJk1cVZ8pyOV/FMdUQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/electron-to-chromium/-/electron-to-chromium-1.5.18.tgz}
+    name: electron-to-chromium
+    version: 1.5.18
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/enhanced-resolve@5.17.1:
+    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/enhanced-resolve/-/enhanced-resolve-5.17.1.tgz}
+    name: enhanced-resolve
+    version: 5.17.1
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      graceful-fs: artifactory.devops.xiaohongshu.com/graceful-fs@4.2.11
+      tapable: artifactory.devops.xiaohongshu.com/tapable@2.2.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/entities@2.2.0:
+    resolution: {integrity: sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/entities/download/entities-2.2.0.tgz}
+    name: entities
+    version: 2.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/envinfo@7.13.0:
+    resolution: {integrity: sha512-cvcaMr7KqXVh4nyzGTVqTum+gAiL265x5jUWQIDLq//zOGbW+gSW/C+OWLleY/rs9Qole6AZLMXPbtIFQbqu+Q==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/envinfo/-/envinfo-7.13.0.tgz}
+    name: envinfo
+    version: 7.13.0
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/es-module-lexer@1.5.4:
+    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/es-module-lexer/-/es-module-lexer-1.5.4.tgz}
+    name: es-module-lexer
+    version: 1.5.4
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/escalade@3.2.0:
+    resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/escalade/-/escalade-3.2.0.tgz}
+    name: escalade
+    version: 3.2.0
+    engines: {node: '>=6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/eslint-scope@5.1.1:
+    resolution: {integrity: sha1-54blmmbLkrP2wfsNUIqrF0hI9Iw=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/eslint-scope/download/eslint-scope-5.1.1.tgz}
+    name: eslint-scope
+    version: 5.1.1
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      esrecurse: artifactory.devops.xiaohongshu.com/esrecurse@4.3.0
+      estraverse: artifactory.devops.xiaohongshu.com/estraverse@4.3.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/esrecurse@4.3.0:
+    resolution: {integrity: sha1-eteWTWeauyi+5yzsY3WLHF0smSE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/esrecurse/download/esrecurse-4.3.0.tgz}
+    name: esrecurse
+    version: 4.3.0
+    engines: {node: '>=4.0'}
+    dependencies:
+      estraverse: artifactory.devops.xiaohongshu.com/estraverse@5.3.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/estraverse@4.3.0:
+    resolution: {integrity: sha1-OYrT88WiSUi+dyXoPRGn3ijNvR0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/estraverse/download/estraverse-4.3.0.tgz}
+    name: estraverse
+    version: 4.3.0
+    engines: {node: '>=4.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/estraverse@5.3.0:
+    resolution: {integrity: sha1-LupSkHAvJquP5TcDcP+GyWXSESM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/estraverse/download/estraverse-5.3.0.tgz}
+    name: estraverse
+    version: 5.3.0
+    engines: {node: '>=4.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/events@3.3.0:
+    resolution: {integrity: sha1-Mala0Kkk4tLEGagTrrLE6HjqdAA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/events/download/events-3.3.0.tgz}
+    name: events
+    version: 3.3.0
+    engines: {node: '>=0.8.x'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/fast-deep-equal@3.1.3:
+    resolution: {integrity: sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/fast-deep-equal/download/fast-deep-equal-3.1.3.tgz}
+    name: fast-deep-equal
+    version: 3.1.3
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/fast-json-stable-stringify@2.1.0:
+    resolution: {integrity: sha1-h0v2nG9ATCtdmcSBNBOZ/VWJJjM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/fast-json-stable-stringify/download/fast-json-stable-stringify-2.1.0.tgz}
+    name: fast-json-stable-stringify
+    version: 2.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/fastest-levenshtein@1.0.16:
+    resolution: {integrity: sha1-IQ5htv8YHekeqbPRuE/e3UfgNOU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/fastest-levenshtein/download/fastest-levenshtein-1.0.16.tgz}
+    name: fastest-levenshtein
+    version: 1.0.16
+    engines: {node: '>= 4.9.1'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/find-up@4.1.0:
+    resolution: {integrity: sha1-l6/n1s3AvFkoWEt8jXsW6KmqXRk=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/find-up/download/find-up-4.1.0.tgz}
+    name: find-up
+    version: 4.1.0
+    engines: {node: '>=8'}
+    dependencies:
+      locate-path: artifactory.devops.xiaohongshu.com/locate-path@5.0.0
+      path-exists: artifactory.devops.xiaohongshu.com/path-exists@4.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/flat@5.0.2:
+    resolution: {integrity: sha1-jKb+MyBp/6nTJMMnGYxZglnOskE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/flat/download/flat-5.0.2.tgz}
+    name: flat
+    version: 5.0.2
+    hasBin: true
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/function-bind@1.1.2:
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/function-bind/-/function-bind-1.1.2.tgz}
+    name: function-bind
+    version: 1.1.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/glob-to-regexp@0.4.1:
+    resolution: {integrity: sha1-x1KXCHyFG5pXi9IX3VmpL1n+VG4=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/glob-to-regexp/download/glob-to-regexp-0.4.1.tgz}
+    name: glob-to-regexp
+    version: 0.4.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/graceful-fs@4.2.11:
+    resolution: {integrity: sha1-QYPk6L8Iu24Fu7L30uDI9xLKQOM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/graceful-fs/download/graceful-fs-4.2.11.tgz}
+    name: graceful-fs
+    version: 4.2.11
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/has-flag@4.0.0:
+    resolution: {integrity: sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/has-flag/download/has-flag-4.0.0.tgz}
+    name: has-flag
+    version: 4.0.0
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/hasown@2.0.2:
+    resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/hasown/-/hasown-2.0.2.tgz}
+    name: hasown
+    version: 2.0.2
+    engines: {node: '>= 0.4'}
+    dependencies:
+      function-bind: artifactory.devops.xiaohongshu.com/function-bind@1.1.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/he@1.2.0:
+    resolution: {integrity: sha1-hK5l+n6vsWX922FWauFLrwVmTw8=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/he/download/he-1.2.0.tgz}
+    name: he
+    version: 1.2.0
+    hasBin: true
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/html-minifier-terser@6.1.0:
+    resolution: {integrity: sha1-v8gYk0zAeRj2s2afV3Ts39SPMqs=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/html-minifier-terser/download/html-minifier-terser-6.1.0.tgz}
+    name: html-minifier-terser
+    version: 6.1.0
+    engines: {node: '>=12'}
+    hasBin: true
+    dependencies:
+      camel-case: artifactory.devops.xiaohongshu.com/camel-case@4.1.2
+      clean-css: artifactory.devops.xiaohongshu.com/clean-css@5.3.3
+      commander: artifactory.devops.xiaohongshu.com/commander@8.3.0
+      he: artifactory.devops.xiaohongshu.com/he@1.2.0
+      param-case: artifactory.devops.xiaohongshu.com/param-case@3.0.4
+      relateurl: artifactory.devops.xiaohongshu.com/relateurl@0.2.7
+      terser: artifactory.devops.xiaohongshu.com/terser@5.32.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/html-webpack-plugin@5.6.0(webpack@5.94.0):
+    resolution: {integrity: sha512-iwaY4wzbe48AfKLZ/Cc8k0L+FKG6oSNRaZ8x5A/T/IVDGyXcbHncM9TdDa93wn0FsSm82FhTKW7f3vS61thXAw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/html-webpack-plugin/-/html-webpack-plugin-5.6.0.tgz}
+    id: artifactory.devops.xiaohongshu.com/html-webpack-plugin/5.6.0
+    name: html-webpack-plugin
+    version: 5.6.0
+    engines: {node: '>=10.13.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      webpack: ^5.20.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      '@types/html-minifier-terser': artifactory.devops.xiaohongshu.com/@types/html-minifier-terser@6.1.0
+      html-minifier-terser: artifactory.devops.xiaohongshu.com/html-minifier-terser@6.1.0
+      lodash: artifactory.devops.xiaohongshu.com/lodash@4.17.21
+      pretty-error: artifactory.devops.xiaohongshu.com/pretty-error@4.0.0
+      tapable: artifactory.devops.xiaohongshu.com/tapable@2.2.1
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/htmlparser2@6.1.0:
+    resolution: {integrity: sha1-xNditsM3GgXb5l6UrkOp+EX7j7c=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/htmlparser2/download/htmlparser2-6.1.0.tgz}
+    name: htmlparser2
+    version: 6.1.0
+    dependencies:
+      domelementtype: artifactory.devops.xiaohongshu.com/domelementtype@2.3.0
+      domhandler: artifactory.devops.xiaohongshu.com/domhandler@4.3.1
+      domutils: artifactory.devops.xiaohongshu.com/domutils@2.8.0
+      entities: artifactory.devops.xiaohongshu.com/entities@2.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/import-local@3.2.0:
+    resolution: {integrity: sha512-2SPlun1JUPWoM6t3F0dw0FkCF/jWY8kttcY4f599GLTSjh2OCuuhdTkJQsEcZzBqbXZGKMK2OqW1oZsjtf/gQA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/import-local/-/import-local-3.2.0.tgz}
+    name: import-local
+    version: 3.2.0
+    engines: {node: '>=8'}
+    hasBin: true
+    dependencies:
+      pkg-dir: artifactory.devops.xiaohongshu.com/pkg-dir@4.2.0
+      resolve-cwd: artifactory.devops.xiaohongshu.com/resolve-cwd@3.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/interpret@3.1.1:
+    resolution: {integrity: sha1-W+DO7WfKecbEvFzw1+6EPc6hEMQ=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/interpret/download/interpret-3.1.1.tgz}
+    name: interpret
+    version: 3.1.1
+    engines: {node: '>=10.13.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/is-core-module@2.15.1:
+    resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/is-core-module/-/is-core-module-2.15.1.tgz}
+    name: is-core-module
+    version: 2.15.1
+    engines: {node: '>= 0.4'}
+    dependencies:
+      hasown: artifactory.devops.xiaohongshu.com/hasown@2.0.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/is-plain-object@2.0.4:
+    resolution: {integrity: sha1-LBY7P6+xtgbZ0Xko8FwqHDjgdnc=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/is-plain-object/download/is-plain-object-2.0.4.tgz}
+    name: is-plain-object
+    version: 2.0.4
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      isobject: artifactory.devops.xiaohongshu.com/isobject@3.0.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/isexe@2.0.0:
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/isexe/download/isexe-2.0.0.tgz}
+    name: isexe
+    version: 2.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/isobject@3.0.1:
+    resolution: {integrity: sha1-TkMekrEalzFjaqH5yNHMvP2reN8=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/isobject/download/isobject-3.0.1.tgz}
+    name: isobject
+    version: 3.0.1
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/jest-worker@27.5.1:
+    resolution: {integrity: sha1-jRRvCQDolzsQa29zzB6ajLhvjbA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/jest-worker/download/jest-worker-27.5.1.tgz}
+    name: jest-worker
+    version: 27.5.1
+    engines: {node: '>= 10.13.0'}
+    dependencies:
+      '@types/node': artifactory.devops.xiaohongshu.com/@types/node@22.5.4
+      merge-stream: artifactory.devops.xiaohongshu.com/merge-stream@2.0.0
+      supports-color: artifactory.devops.xiaohongshu.com/supports-color@8.1.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/json-parse-even-better-errors@2.3.1:
+    resolution: {integrity: sha1-fEeAWpQxmSjgV3dAXcEuH3pO4C0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/json-parse-even-better-errors/download/json-parse-even-better-errors-2.3.1.tgz}
+    name: json-parse-even-better-errors
+    version: 2.3.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/json-schema-traverse@0.4.1:
+    resolution: {integrity: sha1-afaofZUTq4u4/mO9sJecRI5oRmA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/json-schema-traverse/download/json-schema-traverse-0.4.1.tgz}
+    name: json-schema-traverse
+    version: 0.4.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/kind-of@6.0.3:
+    resolution: {integrity: sha1-B8BQNKbDSfoG4k+jWqdttFgM5N0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/kind-of/download/kind-of-6.0.3.tgz}
+    name: kind-of
+    version: 6.0.3
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/loader-runner@4.3.0:
+    resolution: {integrity: sha1-wbShY7mfYUgwNTsWdV5xSawjFOE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/loader-runner/download/loader-runner-4.3.0.tgz}
+    name: loader-runner
+    version: 4.3.0
+    engines: {node: '>=6.11.5'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/locate-path@5.0.0:
+    resolution: {integrity: sha1-Gvujlq/WdqbUJQTQpno6frn2KqA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/locate-path/download/locate-path-5.0.0.tgz}
+    name: locate-path
+    version: 5.0.0
+    engines: {node: '>=8'}
+    dependencies:
+      p-locate: artifactory.devops.xiaohongshu.com/p-locate@4.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/lodash@4.17.21:
+    resolution: {integrity: sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/lodash/download/lodash-4.17.21.tgz}
+    name: lodash
+    version: 4.17.21
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/lower-case@2.0.2:
+    resolution: {integrity: sha1-b6I3xj29xKgsoP2ILkci3F5jTig=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/lower-case/download/lower-case-2.0.2.tgz}
+    name: lower-case
+    version: 2.0.2
+    dependencies:
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/merge-stream@2.0.0:
+    resolution: {integrity: sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/merge-stream/download/merge-stream-2.0.0.tgz}
+    name: merge-stream
+    version: 2.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/mime-db@1.52.0:
+    resolution: {integrity: sha1-u6vNwChZ9JhzAchW4zh85exDv3A=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/mime-db/download/mime-db-1.52.0.tgz}
+    name: mime-db
+    version: 1.52.0
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/mime-types@2.1.35:
+    resolution: {integrity: sha1-OBqHG2KnNEUGYK497uRIE/cNlZo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/mime-types/download/mime-types-2.1.35.tgz}
+    name: mime-types
+    version: 2.1.35
+    engines: {node: '>= 0.6'}
+    dependencies:
+      mime-db: artifactory.devops.xiaohongshu.com/mime-db@1.52.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/neo-async@2.6.2:
+    resolution: {integrity: sha1-tKr7k+OustgXTKU88WOrfXMIMF8=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/neo-async/download/neo-async-2.6.2.tgz}
+    name: neo-async
+    version: 2.6.2
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/no-case@3.0.4:
+    resolution: {integrity: sha1-02H9XJgA9VhVGoNp/A3NRmK2Ek0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/no-case/download/no-case-3.0.4.tgz}
+    name: no-case
+    version: 3.0.4
+    dependencies:
+      lower-case: artifactory.devops.xiaohongshu.com/lower-case@2.0.2
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/node-releases@2.0.18:
+    resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/node-releases/-/node-releases-2.0.18.tgz}
+    name: node-releases
+    version: 2.0.18
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/nth-check@2.1.1:
+    resolution: {integrity: sha1-yeq0KO/842zWuSySS9sADvHx7R0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/nth-check/download/nth-check-2.1.1.tgz}
+    name: nth-check
+    version: 2.1.1
+    dependencies:
+      boolbase: artifactory.devops.xiaohongshu.com/boolbase@1.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/p-limit@2.3.0:
+    resolution: {integrity: sha1-PdM8ZHohT9//2DWTPrCG2g3CHbE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/p-limit/download/p-limit-2.3.0.tgz}
+    name: p-limit
+    version: 2.3.0
+    engines: {node: '>=6'}
+    dependencies:
+      p-try: artifactory.devops.xiaohongshu.com/p-try@2.2.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/p-locate@4.1.0:
+    resolution: {integrity: sha1-o0KLtwiLOmApL2aRkni3wpetTwc=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/p-locate/download/p-locate-4.1.0.tgz}
+    name: p-locate
+    version: 4.1.0
+    engines: {node: '>=8'}
+    dependencies:
+      p-limit: artifactory.devops.xiaohongshu.com/p-limit@2.3.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/p-try@2.2.0:
+    resolution: {integrity: sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/p-try/download/p-try-2.2.0.tgz}
+    name: p-try
+    version: 2.2.0
+    engines: {node: '>=6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/param-case@3.0.4:
+    resolution: {integrity: sha1-fRf+SqEr3jTUp32RrPtiGcqtAcU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/param-case/download/param-case-3.0.4.tgz}
+    name: param-case
+    version: 3.0.4
+    dependencies:
+      dot-case: artifactory.devops.xiaohongshu.com/dot-case@3.0.4
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/pascal-case@3.1.2:
+    resolution: {integrity: sha1-tI4O8rmOIF58Ha50fQsVCCN2YOs=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/pascal-case/download/pascal-case-3.1.2.tgz}
+    name: pascal-case
+    version: 3.1.2
+    dependencies:
+      no-case: artifactory.devops.xiaohongshu.com/no-case@3.0.4
+      tslib: artifactory.devops.xiaohongshu.com/tslib@2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/path-exists@4.0.0:
+    resolution: {integrity: sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/path-exists/download/path-exists-4.0.0.tgz}
+    name: path-exists
+    version: 4.0.0
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/path-key@3.1.1:
+    resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/path-key/download/path-key-3.1.1.tgz}
+    name: path-key
+    version: 3.1.1
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/path-parse@1.0.7:
+    resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/path-parse/download/path-parse-1.0.7.tgz}
+    name: path-parse
+    version: 1.0.7
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/picocolors@1.1.0:
+    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.0.tgz}
+    name: picocolors
+    version: 1.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/pkg-dir@4.2.0:
+    resolution: {integrity: sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/pkg-dir/download/pkg-dir-4.2.0.tgz}
+    name: pkg-dir
+    version: 4.2.0
+    engines: {node: '>=8'}
+    dependencies:
+      find-up: artifactory.devops.xiaohongshu.com/find-up@4.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/pretty-error@4.0.0:
+    resolution: {integrity: sha1-kKcD9G3XI0rbRtD4SCPp0cuPENY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/pretty-error/download/pretty-error-4.0.0.tgz}
+    name: pretty-error
+    version: 4.0.0
+    dependencies:
+      lodash: artifactory.devops.xiaohongshu.com/lodash@4.17.21
+      renderkid: artifactory.devops.xiaohongshu.com/renderkid@3.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/punycode@2.3.1:
+    resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/punycode/-/punycode-2.3.1.tgz}
+    name: punycode
+    version: 2.3.1
+    engines: {node: '>=6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/randombytes@2.1.0:
+    resolution: {integrity: sha1-32+ENy8CcNxlzfYpE0mrekc9Tyo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/randombytes/download/randombytes-2.1.0.tgz}
+    name: randombytes
+    version: 2.1.0
+    dependencies:
+      safe-buffer: artifactory.devops.xiaohongshu.com/safe-buffer@5.2.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/rechoir@0.8.0:
+    resolution: {integrity: sha1-Sfhm4NMhRhQto62PDv81KzIV/yI=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/rechoir/download/rechoir-0.8.0.tgz}
+    name: rechoir
+    version: 0.8.0
+    engines: {node: '>= 10.13.0'}
+    dependencies:
+      resolve: artifactory.devops.xiaohongshu.com/resolve@1.22.8
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/relateurl@0.2.7:
+    resolution: {integrity: sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/relateurl/download/relateurl-0.2.7.tgz}
+    name: relateurl
+    version: 0.2.7
+    engines: {node: '>= 0.10'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/renderkid@3.0.0:
+    resolution: {integrity: sha1-X9gj5NaVHTc1jsyaWLHwaDa2Joo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/renderkid/download/renderkid-3.0.0.tgz}
+    name: renderkid
+    version: 3.0.0
+    dependencies:
+      css-select: artifactory.devops.xiaohongshu.com/css-select@4.3.0
+      dom-converter: artifactory.devops.xiaohongshu.com/dom-converter@0.2.0
+      htmlparser2: artifactory.devops.xiaohongshu.com/htmlparser2@6.1.0
+      lodash: artifactory.devops.xiaohongshu.com/lodash@4.17.21
+      strip-ansi: artifactory.devops.xiaohongshu.com/strip-ansi@6.0.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/resolve-cwd@3.0.0:
+    resolution: {integrity: sha1-DwB18bslRHZs9zumpuKt/ryxPy0=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/resolve-cwd/download/resolve-cwd-3.0.0.tgz}
+    name: resolve-cwd
+    version: 3.0.0
+    engines: {node: '>=8'}
+    dependencies:
+      resolve-from: artifactory.devops.xiaohongshu.com/resolve-from@5.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/resolve-from@5.0.0:
+    resolution: {integrity: sha1-w1IlhD3493bfIcV1V7wIfp39/Gk=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/resolve-from/download/resolve-from-5.0.0.tgz}
+    name: resolve-from
+    version: 5.0.0
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/resolve@1.22.8:
+    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/resolve/-/resolve-1.22.8.tgz}
+    name: resolve
+    version: 1.22.8
+    hasBin: true
+    dependencies:
+      is-core-module: artifactory.devops.xiaohongshu.com/is-core-module@2.15.1
+      path-parse: artifactory.devops.xiaohongshu.com/path-parse@1.0.7
+      supports-preserve-symlinks-flag: artifactory.devops.xiaohongshu.com/supports-preserve-symlinks-flag@1.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/safe-buffer@5.2.1:
+    resolution: {integrity: sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/safe-buffer/download/safe-buffer-5.2.1.tgz}
+    name: safe-buffer
+    version: 5.2.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/schema-utils@3.3.0:
+    resolution: {integrity: sha1-9QqIh3w8AWUqFbYirp6Xld96YP4=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/schema-utils/download/schema-utils-3.3.0.tgz}
+    name: schema-utils
+    version: 3.3.0
+    engines: {node: '>= 10.13.0'}
+    dependencies:
+      '@types/json-schema': artifactory.devops.xiaohongshu.com/@types/json-schema@7.0.15
+      ajv: artifactory.devops.xiaohongshu.com/ajv@6.12.6
+      ajv-keywords: artifactory.devops.xiaohongshu.com/ajv-keywords@3.5.2(ajv@6.12.6)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/serialize-javascript@6.0.2:
+    resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/serialize-javascript/-/serialize-javascript-6.0.2.tgz}
+    name: serialize-javascript
+    version: 6.0.2
+    dependencies:
+      randombytes: artifactory.devops.xiaohongshu.com/randombytes@2.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/shallow-clone@3.0.1:
+    resolution: {integrity: sha1-jymBrZJTH1UDWwH7IwdppA4C76M=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/shallow-clone/download/shallow-clone-3.0.1.tgz}
+    name: shallow-clone
+    version: 3.0.1
+    engines: {node: '>=8'}
+    dependencies:
+      kind-of: artifactory.devops.xiaohongshu.com/kind-of@6.0.3
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/shebang-command@2.0.0:
+    resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/shebang-command/download/shebang-command-2.0.0.tgz}
+    name: shebang-command
+    version: 2.0.0
+    engines: {node: '>=8'}
+    dependencies:
+      shebang-regex: artifactory.devops.xiaohongshu.com/shebang-regex@3.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/shebang-regex@3.0.0:
+    resolution: {integrity: sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/shebang-regex/download/shebang-regex-3.0.0.tgz}
+    name: shebang-regex
+    version: 3.0.0
+    engines: {node: '>=8'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/source-map-support@0.5.21:
+    resolution: {integrity: sha1-BP58f54e0tZiIzwoyys1ufY/bk8=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/source-map-support/download/source-map-support-0.5.21.tgz}
+    name: source-map-support
+    version: 0.5.21
+    dependencies:
+      buffer-from: artifactory.devops.xiaohongshu.com/buffer-from@1.1.2
+      source-map: artifactory.devops.xiaohongshu.com/source-map@0.6.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/source-map@0.6.1:
+    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/source-map/download/source-map-0.6.1.tgz}
+    name: source-map
+    version: 0.6.1
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/strip-ansi@6.0.1:
+    resolution: {integrity: sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/strip-ansi/download/strip-ansi-6.0.1.tgz}
+    name: strip-ansi
+    version: 6.0.1
+    engines: {node: '>=8'}
+    dependencies:
+      ansi-regex: artifactory.devops.xiaohongshu.com/ansi-regex@5.0.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/supports-color@8.1.1:
+    resolution: {integrity: sha1-zW/BfihQDP9WwbhsCn/UpUpzAFw=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/supports-color/download/supports-color-8.1.1.tgz}
+    name: supports-color
+    version: 8.1.1
+    engines: {node: '>=10'}
+    dependencies:
+      has-flag: artifactory.devops.xiaohongshu.com/has-flag@4.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/supports-preserve-symlinks-flag@1.0.0:
+    resolution: {integrity: sha1-btpL00SjyUrqN21MwxvHcxEDngk=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/supports-preserve-symlinks-flag/download/supports-preserve-symlinks-flag-1.0.0.tgz}
+    name: supports-preserve-symlinks-flag
+    version: 1.0.0
+    engines: {node: '>= 0.4'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/tapable@2.2.1:
+    resolution: {integrity: sha1-GWenPvQGCoLxKrlq+G1S/bdu7KA=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/tapable/download/tapable-2.2.1.tgz}
+    name: tapable
+    version: 2.2.1
+    engines: {node: '>=6'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/terser-webpack-plugin@5.3.10(webpack@5.94.0):
+    resolution: {integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/terser-webpack-plugin/-/terser-webpack-plugin-5.3.10.tgz}
+    id: artifactory.devops.xiaohongshu.com/terser-webpack-plugin/5.3.10
+    name: terser-webpack-plugin
+    version: 5.3.10
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      '@swc/core': '*'
+      esbuild: '*'
+      uglify-js: '*'
+      webpack: ^5.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      esbuild:
+        optional: true
+      uglify-js:
+        optional: true
+    dependencies:
+      '@jridgewell/trace-mapping': artifactory.devops.xiaohongshu.com/@jridgewell/trace-mapping@0.3.25
+      jest-worker: artifactory.devops.xiaohongshu.com/jest-worker@27.5.1
+      schema-utils: artifactory.devops.xiaohongshu.com/schema-utils@3.3.0
+      serialize-javascript: artifactory.devops.xiaohongshu.com/serialize-javascript@6.0.2
+      terser: artifactory.devops.xiaohongshu.com/terser@5.32.0
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/terser@5.32.0:
+    resolution: {integrity: sha512-v3Gtw3IzpBJ0ugkxEX8U0W6+TnPKRRCWGh1jC/iM/e3Ki5+qvO1L1EAZ56bZasc64aXHwRHNIQEzm6//i5cemQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/terser/-/terser-5.32.0.tgz}
+    name: terser
+    version: 5.32.0
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': artifactory.devops.xiaohongshu.com/@jridgewell/source-map@0.3.6
+      acorn: artifactory.devops.xiaohongshu.com/acorn@8.12.1
+      commander: artifactory.devops.xiaohongshu.com/commander@2.20.3
+      source-map-support: artifactory.devops.xiaohongshu.com/source-map-support@0.5.21
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/tslib/-/tslib-2.7.0.tgz}
+    name: tslib
+    version: 2.7.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/undici-types/-/undici-types-6.19.8.tgz}
+    name: undici-types
+    version: 6.19.8
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/update-browserslist-db@1.1.0(browserslist@4.23.3):
+    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/update-browserslist-db/-/update-browserslist-db-1.1.0.tgz}
+    id: artifactory.devops.xiaohongshu.com/update-browserslist-db/1.1.0
+    name: update-browserslist-db
+    version: 1.1.0
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+    dependencies:
+      browserslist: artifactory.devops.xiaohongshu.com/browserslist@4.23.3
+      escalade: artifactory.devops.xiaohongshu.com/escalade@3.2.0
+      picocolors: artifactory.devops.xiaohongshu.com/picocolors@1.1.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/uri-js@4.4.1:
+    resolution: {integrity: sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/uri-js/download/uri-js-4.4.1.tgz}
+    name: uri-js
+    version: 4.4.1
+    dependencies:
+      punycode: artifactory.devops.xiaohongshu.com/punycode@2.3.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/utila@0.4.0:
+    resolution: {integrity: sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/utila/download/utila-0.4.0.tgz}
+    name: utila
+    version: 0.4.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/watchpack@2.4.2:
+    resolution: {integrity: sha512-TnbFSbcOCcDgjZ4piURLCbJ3nJhznVh9kw6F6iokjiFPl8ONxe9A6nMDVXDiNbrSfLILs6vB07F7wLBrwPYzJw==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/watchpack/-/watchpack-2.4.2.tgz}
+    name: watchpack
+    version: 2.4.2
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      glob-to-regexp: artifactory.devops.xiaohongshu.com/glob-to-regexp@0.4.1
+      graceful-fs: artifactory.devops.xiaohongshu.com/graceful-fs@4.2.11
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0):
+    resolution: {integrity: sha1-yOBGun6q5JEdfnHislt3b8w1dZs=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/webpack-cli/download/webpack-cli-5.1.4.tgz}
+    id: artifactory.devops.xiaohongshu.com/webpack-cli/5.1.4
+    name: webpack-cli
+    version: 5.1.4
+    engines: {node: '>=14.15.0'}
+    hasBin: true
+    peerDependencies:
+      '@webpack-cli/generators': '*'
+      webpack: 5.x.x
+      webpack-bundle-analyzer: '*'
+      webpack-dev-server: '*'
+    peerDependenciesMeta:
+      '@webpack-cli/generators':
+        optional: true
+      webpack-bundle-analyzer:
+        optional: true
+      webpack-dev-server:
+        optional: true
+    dependencies:
+      '@discoveryjs/json-ext': artifactory.devops.xiaohongshu.com/@discoveryjs/json-ext@0.5.7
+      '@webpack-cli/configtest': artifactory.devops.xiaohongshu.com/@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.94.0)
+      '@webpack-cli/info': artifactory.devops.xiaohongshu.com/@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.94.0)
+      '@webpack-cli/serve': artifactory.devops.xiaohongshu.com/@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.94.0)
+      colorette: artifactory.devops.xiaohongshu.com/colorette@2.0.20
+      commander: artifactory.devops.xiaohongshu.com/commander@10.0.1
+      cross-spawn: artifactory.devops.xiaohongshu.com/cross-spawn@7.0.3
+      envinfo: artifactory.devops.xiaohongshu.com/envinfo@7.13.0
+      fastest-levenshtein: artifactory.devops.xiaohongshu.com/fastest-levenshtein@1.0.16
+      import-local: artifactory.devops.xiaohongshu.com/import-local@3.2.0
+      interpret: artifactory.devops.xiaohongshu.com/interpret@3.1.1
+      rechoir: artifactory.devops.xiaohongshu.com/rechoir@0.8.0
+      webpack: artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4)
+      webpack-merge: artifactory.devops.xiaohongshu.com/webpack-merge@5.10.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/webpack-merge@5.10.0:
+    resolution: {integrity: sha512-+4zXKdx7UnO+1jaN4l2lHVD+mFvnlZQP/6ljaJVb4SZiwIKeUnrT5l0gkT8z+n4hKpC+jpOv6O9R+gLtag7pSA==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/webpack-merge/-/webpack-merge-5.10.0.tgz}
+    name: webpack-merge
+    version: 5.10.0
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      clone-deep: artifactory.devops.xiaohongshu.com/clone-deep@4.0.1
+      flat: artifactory.devops.xiaohongshu.com/flat@5.0.2
+      wildcard: artifactory.devops.xiaohongshu.com/wildcard@2.0.1
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/webpack-sources@3.2.3:
+    resolution: {integrity: sha1-LU2quEUf1LJAzCcFX/agwszqDN4=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/webpack-sources/download/webpack-sources-3.2.3.tgz}
+    name: webpack-sources
+    version: 3.2.3
+    engines: {node: '>=10.13.0'}
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/webpack@5.94.0(webpack-cli@5.1.4):
+    resolution: {integrity: sha512-KcsGn50VT+06JH/iunZJedYGUJS5FGjow8wb9c0v5n1Om8O1g4L6LjtfxwlXIATopoQu+vOXXa7gYisWxCoPyg==, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/webpack/-/webpack-5.94.0.tgz}
+    id: artifactory.devops.xiaohongshu.com/webpack/5.94.0
+    name: webpack
+    version: 5.94.0
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
+    dependencies:
+      '@types/estree': artifactory.devops.xiaohongshu.com/@types/estree@1.0.5
+      '@webassemblyjs/ast': artifactory.devops.xiaohongshu.com/@webassemblyjs/ast@1.12.1
+      '@webassemblyjs/wasm-edit': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-edit@1.12.1
+      '@webassemblyjs/wasm-parser': artifactory.devops.xiaohongshu.com/@webassemblyjs/wasm-parser@1.12.1
+      acorn: artifactory.devops.xiaohongshu.com/acorn@8.12.1
+      acorn-import-attributes: artifactory.devops.xiaohongshu.com/acorn-import-attributes@1.9.5(acorn@8.12.1)
+      browserslist: artifactory.devops.xiaohongshu.com/browserslist@4.23.3
+      chrome-trace-event: artifactory.devops.xiaohongshu.com/chrome-trace-event@1.0.4
+      enhanced-resolve: artifactory.devops.xiaohongshu.com/enhanced-resolve@5.17.1
+      es-module-lexer: artifactory.devops.xiaohongshu.com/es-module-lexer@1.5.4
+      eslint-scope: artifactory.devops.xiaohongshu.com/eslint-scope@5.1.1
+      events: artifactory.devops.xiaohongshu.com/events@3.3.0
+      glob-to-regexp: artifactory.devops.xiaohongshu.com/glob-to-regexp@0.4.1
+      graceful-fs: artifactory.devops.xiaohongshu.com/graceful-fs@4.2.11
+      json-parse-even-better-errors: artifactory.devops.xiaohongshu.com/json-parse-even-better-errors@2.3.1
+      loader-runner: artifactory.devops.xiaohongshu.com/loader-runner@4.3.0
+      mime-types: artifactory.devops.xiaohongshu.com/mime-types@2.1.35
+      neo-async: artifactory.devops.xiaohongshu.com/neo-async@2.6.2
+      schema-utils: artifactory.devops.xiaohongshu.com/schema-utils@3.3.0
+      tapable: artifactory.devops.xiaohongshu.com/tapable@2.2.1
+      terser-webpack-plugin: artifactory.devops.xiaohongshu.com/terser-webpack-plugin@5.3.10(webpack@5.94.0)
+      watchpack: artifactory.devops.xiaohongshu.com/watchpack@2.4.2
+      webpack-cli: artifactory.devops.xiaohongshu.com/webpack-cli@5.1.4(webpack@5.94.0)
+      webpack-sources: artifactory.devops.xiaohongshu.com/webpack-sources@3.2.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/which@2.0.2:
+    resolution: {integrity: sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/which/download/which-2.0.2.tgz}
+    name: which
+    version: 2.0.2
+    engines: {node: '>= 8'}
+    hasBin: true
+    dependencies:
+      isexe: artifactory.devops.xiaohongshu.com/isexe@2.0.0
+    dev: true
+
+  artifactory.devops.xiaohongshu.com/wildcard@2.0.1:
+    resolution: {integrity: sha1-WrENAkhxmJVINrY0n3T/+WHhD2c=, registry: http://npm.devops.xiaohongshu.com:7001/, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/wildcard/download/wildcard-2.0.1.tgz}
+    name: wildcard
+    version: 2.0.1
+    dev: true
