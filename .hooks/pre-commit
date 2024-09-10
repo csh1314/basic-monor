@@ -1,0 +1,24 @@
+#!/bin/sh
+
+namespace="\033[34mBasicMonorepo\033[0m"
+
+files=$(git diff --name-only --diff-filter=duxb --cached | sed -e "s/[[:space:]]/\n/g")
+files=$(echo "$files" | sed -n -E '/\.(js|ts|tsx|wpy|vue)$/p') # only lint js, ts, tsx, wpy, vue files
+
+# no staged files, exit 0
+if [ ${#files} -eq 0 ]
+then
+  exit 0
+fi
+
+echo "[$namespace] Start linting..."
+FILES=$files npm run lint:auto
+# lint file $files # here has a trick: "$files" would keep newlines, but $files won't
+
+if [ "$?" -ne 0 ]
+then
+  echo "[$namespace] Lint failed, fix all errors above and commit again."
+  echo "[$namespace] Prettier auto format changed files."
+  FILES=$files npm run format:auto
+  exit 1
+fi

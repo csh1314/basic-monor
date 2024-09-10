@@ -4,6 +4,8 @@
   "description": "test project",
   "main": "index.js",
   "scripts": {
+    "lint:auto": "eslint ${FILES} && prettier --check ${FILES}",
+    "format:auto": "prettier --write ${FILES}",
     "release": "pnpm changeset version; pnpm install; git add .; git commit -m\"release: version\"; pnpm changeset tag; git push --follow-tags"
   },
   "keywords": [],
