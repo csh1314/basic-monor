@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# do not deal with commit from -m or cherry-pick or merge
+
+if [[ $2 = 'message' ]] || [[ $2 = 'template' ]] || [[ $2 = 'merge' ]]
+then
+  exit 0
+fi
+
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+TEMPLATE="$parent_path/template"
+
+# ugly methods
+sed -n '/^[[:space:]]*#/p' $1 > _template_temp_1
+sed -n '/^[[:space:]]*#/!p' $1 > _template_temp_2
+
+cat $TEMPLATE _template_temp_1 > _template_temp_3
+cat _template_temp_2 _template_temp_3 > _template_temp_4
+
+mv -f _template_temp_4 $1
+rm _template_temp*
