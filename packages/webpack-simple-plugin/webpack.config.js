@@ -24,6 +24,8 @@ module.exports = {
         inject: "body",
         scriptLoading: "blocking",
       }),
-      new StaticPageSlicePlugin({})
+      new StaticPageSlicePlugin({
+        injectorUrl: 'http://localhost:3000/injector/data'
+      })
     ]
 }
