@@ -4,17 +4,6 @@ module.exports = {
     es2021: true,
     node: true
   },
-  overrides: [
-    {
-      files: ['*.md'],
-      parser: 'eslint-plugin-markdownlint/parser',
-      extends: ['plugin:markdownlint/recommended'],
-      rules: {
-        'markdownlint/md005': 'off',
-        'markdownlint/md013': 'off'
-      }
-    }
-  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
