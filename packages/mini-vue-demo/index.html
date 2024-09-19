@@ -1,0 +1,269 @@
+<div id="app">
+  {{title}}
+  <comp></comp>
+</div>
+
+<script>
+  // h函数, 生成 vnode
+  function h(tag, props, children) {
+    return { tag, props, children };
+  }
+
+  // 1.基本结构
+  const Vue = {
+    // 扩展性
+    // 平台无关性
+    createRenderer({ querySelector, insert, createElement, remove }) {
+      return {
+        createApp(options) {
+          return {
+            mount(selector) {
+              const parent = querySelector(selector);
+              if (!options.render) {
+                options.render = this.compile(parent.innerHTML);
+              }
+              if (options.setup) {
+                this.setupState = options.setup();
+              }
+              if (options.data) {
+                this.data = options.data();
+              }
+              const proxyData = new Proxy(this, {
+                get(target, key) {
+                  if (target.setupState && key in target.setupState) {
+                    return target.setupState[key];
+                  }
+                  return target.data[key];
+                },
+                set(target, key, val) {
+                  if (target.setupState && key in target.setupState) {
+                    target.setupState[key] = val;
+                  } else {
+                    target.data[key] = val;
+                  }
+                },
+              });
+              // 将update 变为副作用函数 effect()
+              //  放入依赖
+              this.update = effect(() => {
+                const vnode = options.render.call(proxyData);
+                // 转vnode为dom
+                // 初始化整棵树
+                if (!this.isMounted) {
+                  const el = this.createElm(vnode);
+                  parent.innerHTML = "";
+                  insert(el, parent);
+                  this.isMounted = true;
+                } else {
+                  // (oldVnode, newVnode)
+                  this.patch(this._vnode, vnode);
+                }
+                // 保存上一次的 vnode => oldVnode
+                this._vnode = vnode;
+              });
+            },
+            patch(n1, n2) {
+              // 获取dom
+              const el = n2.el = n1.el
+
+              // n1: oldVnode, n2: newVnode
+              // 1.更新:必须更新相同结点
+              // tag、key  isSameVnode
+              if (n1.tag === n2.tag && n1.key === n2.key) {
+                // update
+                // props TODO
+
+                // children
+                const oldCh = n1.children,
+                  newCh = n2.children;
+                if (typeof oldCh === "string") {
+                  if (typeof newCh === "string") {
+                    // text update
+                    el.textContent = newCh
+                  } else {
+                    el.textContent = ''
+                    newCh.forEach(child => insert(this.createElm(child), el))
+                  }
+                } else {
+                  if (typeof newCh === "string") {
+                    el.textContent = newCh
+                  } else {
+                    // updateChildren
+                    // 比较两children数组然后作用于父el
+                    this.updateChildren(el, oldCh, newCh)
+                  }
+                }
+              } else {
+                // replace
+              }
+            },
+            // 四指针方案: 双端算法
+            // 首尾 首首 尾尾 尾首
+            updateChildren(el, oldCh, newCh){
+              // 1.获取newCh和oldCh中比较短的哪一个
+              const len = Math.min(oldCh.length, newCh.length)
+              // 强制更新
+              for(let i = 0; i<len; i++){
+                this.patch(oldCh[i], newCh[i])
+              }
+              // 处理剩余元素
+              if(newCh.length > oldCh.length){
+                // 批量创建
+                newCh.slice(len).forEach(child => insert(this.createElm(child), el))
+              }else if(newCh.length < oldCh.length){
+                oldCh.slice(len).forEach(child => remove(child.el, el))
+              }
+            },
+            createElm(vnode) {
+              const { tag, props, children } = vnode;
+              // 遍历vnode, 创建整棵树
+              const el = createElement(tag);
+
+              // 如果存在属性, 设置属性
+              // el.setAttribute(key, val)
+
+              // children 向下递归
+              if (typeof children === "string") {
+                el.textContent = children;
+              } else {
+                children.forEach((child) => {
+                  insert(this.createElm(child), el);
+                });
+              }
+              // vnode中要保存真实dom, 以备未来更新使用
+              vnode.el = el;
+              return el;
+            },
+            // compile: template string => vnode
+            compile(template) {
+              console.log(template)
+              return function render() {
+                if(Array.isArray(this.title)) {
+                  return h('h3', null, this.title.map(s => h('span', {
+                    style: {
+                      color: 'red'
+                    }
+                  }, s)))
+                }
+                return h('h3', null, this.title)
+                // 返回一个虚拟dom
+                // return h('h3', null, this.title)
+                // return h("h2", null, [
+                //   h("p", null, this.title),
+                //   h("p", null, this.title),
+                //   h("p", null, this.title),
+                // ]);
+              };
+            },
+          };
+        },
+      };
+    },
+
+    createApp(options) {
+      // 创建一个web平台特有渲染器
+      const renderer = Vue.createRenderer({
+        querySelector(sel) {
+          return document.querySelector(sel);
+        },
+        insert(el, parent) {
+          parent.appendChild(el);
+        },
+        createElement(tag) {
+          return document.createElement(tag);
+        },
+        remove(el, parent) {
+          parent.removeChild(el)
+        }
+      });
+      return renderer.createApp(options);
+    },
+  };
+</script>
+<script>
+  // 数据拦截访问 => 响应式
+  function reactive(obj) {
+    return new Proxy(obj, {
+      get(target, key) {
+        // console.log('get key:', key)
+        // 收集依赖
+        track(target, key);
+        return target[key];
+      },
+      set(target, key, val) {
+        // console.log('set key:', key)
+        target[key] = val;
+        // 触发依赖
+        trigger(target, key);
+      },
+    });
+  }
+  // 依赖收集
+  // 建立映射关系: 依赖dep - 组件更新函数
+  // vue2 : 每个组件 => watcher
+  // vue3 : Map()
+
+  // { target: {key: [update1, update2]} }
+  const targetMap = {};
+  // 源码 ===> weakMap()  弱键
+  // 与Map相比好处 => 性能更优、防止内存泄漏、垃圾回收
+
+  // 调用effect, 首先执行fn
+  const effectStack = [];
+  function effect(fn) {
+    const eff = function () {
+      try {
+        effectStack.push(eff);
+        fn();
+      } finally {
+        effectStack.pop();
+      }
+    };
+    eff();
+    return eff;
+  }
+  // 建立target, key 和 effectStack 中副作用函数之间的关系
+  function track(target, key) {
+    const effect = effectStack[effectStack.length - 1];
+    targetMap[target] = targetMap[target] || {};
+    let deps = targetMap[target][key];
+    if (!deps) {
+      deps = targetMap[target][key] = [];
+    }
+    // 映射关系建立
+    if (deps.indexOf(effect) === -1) {
+      deps.push(effect);
+    }
+  }
+
+  function trigger(target, key) {
+    const map = targetMap[target];
+    if (map && map[key]) {
+      map[key].forEach((dep) => {
+        dep();
+      });
+    }
+  }
+  // test code
+  // const obj = reactive({
+  //   foo:'foo'
+  // })
+  // effect(() => {
+  //   console.log(obj.foo)
+  // })
+  // obj.foo = 'bar'
+
+  const app = Vue.createApp({
+    setup() {
+      const state = reactive({
+        title: "vue3, hello!".split(''),
+      });
+      setTimeout(() => {
+        state.title = 'hello!'.split('')
+      },2000)
+      return state;
+    },
+  });
+
+  app.mount("#app");
+</script>
