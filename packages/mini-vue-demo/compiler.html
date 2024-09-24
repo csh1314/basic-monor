@@ -1,0 +1,464 @@
+<div id="app"></div>
+
+<script>
+  /**---------- Parser Start ---------------*/
+  const State = {
+    initial: 1,
+    tagOpen: 2,
+    tagName: 3,
+    text: 4,
+    tagEnd: 5,
+    tagEndName: 6,
+  }
+  const isAlpha = char => char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z'
+
+  // 目前简单实现，不支持空格
+  const tokenize = (str) => {
+    let currentState = State.initial
+
+    const chars = []
+    const tokens = []
+
+    const consumeChar = () => {
+      str = str.slice(1)
+    }
+    while(str?.length) {
+      const char = str[0]
+
+      switch (currentState) {
+        case State.initial: {
+          if (char === '<') {
+            currentState = State.tagOpen
+            consumeChar()
+          } else if (isAlpha(char)) {
+            currentState = State.text
+            chars.push(char)
+            consumeChar()
+          }
+          break
+        }
+        case State.tagOpen: {
+          if (isAlpha(char)) {
+            currentState = State.tagName
+            chars.push(char)
+            consumeChar()
+          } else if (char === '/') {
+            currentState = State.tagEnd
+            consumeChar()
+          }
+          break
+        }
+        case State.tagName: {
+          if (isAlpha(char)) {
+            chars.push(char)
+            consumeChar()
+          } else if (char === '>') {
+            // reset
+            currentState = State.initial
+            tokens.push({
+              type: 'tag',
+              name: chars.join('')
+            })
+            chars.length = 0
+            consumeChar()
+          }
+          break
+        }
+        case State.text: {
+          if (isAlpha(char)) {
+            chars.push(char)
+            consumeChar()
+          } else if (char === '<') {
+            currentState = State.tagOpen
+            tokens.push({
+              type: 'text',
+              content: chars.join(''),
+            })
+            chars.length = 0
+            consumeChar()
+          }
+          break
+        }
+        case State.tagEnd: {
+          if (isAlpha(char)) {
+            currentState = State.tagEndName
+            chars.push(char)
+            consumeChar()
+          }
+          break
+        }
+        case State.tagEndName: {
+          if (isAlpha(char)) {
+            chars.push(char)
+            consumeChar()
+          } else if (char === '>') {
+            currentState = State.initial
+            tokens.push({
+              type: 'tagEnd',
+              name: chars.join('')
+            })
+            chars.length = 0
+            consumeChar()
+          }
+          break
+        }
+        default:
+          consumeChar()
+          break
+      }
+    }
+
+    return tokens
+  }
+
+  const parse = (templateStr) => {
+    /*
+    [
+      {
+          "type": "tag",
+          "name": "div"
+      },
+      {
+          "type": "tag",
+          "name": "p"
+      },
+      {
+          "type": "text",
+          "content": "VueTemplate"
+      },
+      {
+          "type": "tagEnd",
+          "name": "p"
+      },
+      {
+          "type": "tagEnd",
+          "name": "div"
+      }
+    ]
+    */
+    const tokens = tokenize(templateStr)
+    const root = {
+      type: 'Root',
+      children: []
+    }
+
+    const elementStack = [root]
+
+    while(tokens.length) {
+      const parent = elementStack[elementStack.length - 1]
+      const t = tokens[0]
+      switch(t.type) {
+        case 'tag': {
+          const node = {
+            type: 'Element',
+            tag: t.name,
+            children: []
+          }
+          parent.children.push(node)
+          elementStack.push(node)
+          break
+        }
+        case 'text': {
+          const node = {
+            type: 'Text',
+            content: t.content,
+          }
+          parent.children.push(node)
+          break
+        }
+        case 'tagEnd': {
+          elementStack.pop()
+          break
+        }
+      }
+
+      tokens.shift()
+    }
+    
+    console.log('ast', root)
+    return root
+  };
+  /**---------- Parser End ---------------*/
+
+
+  /**---------- Transformer Start ---------------*/
+  function traverseNode(ast, context) {
+    context.currentNode = ast
+    
+    const exitFns = []
+    const transforms = context.nodeTransforms
+
+    for (let i = 0; i<transforms.length; i++) {
+      const onExit = transforms[i](context.currentNode, context)
+
+      if (onExit) exitFns.push(onExit)
+
+      // maybe be removed
+      if (!context.currentNode) return
+    }
+
+    const children = context.currentNode.children
+    if (Array.isArray(children)) {
+      for (let i = 0; i<children.length; i++) {
+        context.parent = context.currentNode
+        context.childIndex = i
+        traverseNode(children[i], context)
+      }
+    }
+
+    let i = exitFns.length
+    while(i--) {
+      exitFns[i]()
+    }
+  }
+
+  const AstUtils = {
+    // StringLiteral node
+    createStringLiteral(value) {
+      return {
+        type: 'StringLiteral',
+        value
+      }
+    },
+    // Identifier node
+    createIdentifier(name) {
+      return {
+        type: 'Identifier',
+        name
+      }
+    },
+    // ArrayExpression node
+    createArrayExpression(elements) {
+      return {
+        type: 'ArrayExpression',
+        elements
+      }
+    },
+    createCallExpression(callee, arguments) {
+      return {
+        type: 'CallExpression',
+        callee: AstUtils.createIdentifier(callee),
+        arguments,
+      }
+    }
+  }
+
+  const _transformText = (node, context) => {
+    if (node.type !== 'Text') {
+      return
+    }
+    node.jsNode = AstUtils.createStringLiteral(node.content)
+  }
+
+  const _transformRoot = (node, context) => {
+   return () => {
+    if (node.type !== 'Root') {
+      return
+    }
+    // 先只考虑单节点情况
+    const vnodeJSAst = node.children[0].jsNode
+    node.jsNode = {
+      type: 'FunctionDecl',
+      id: { type: 'Identifier', name: 'render' },
+      params: [],
+      body: [
+        {
+          type: 'ReturnStatement',
+          return: vnodeJSAst
+        }
+      ]
+    }
+   }
+  }
+
+  const _transformElement = (node) => {
+    return () => {
+      if (node.type !== 'Element') {
+        return
+      }
+
+      const callExp = AstUtils.createCallExpression(
+        'h',
+        [
+          AstUtils.createStringLiteral(node.tag)
+        ]
+      )
+      
+      node.children.length === 1
+        ? callExp.arguments.push(node.children[0].jsNode)
+        : callExp.arguments.push(AstUtils.createArrayExpression(node.children.map(i => i.jsNode)))
+
+      node.jsNode = callExp
+    }
+  }
+
+  const transform = (ast) => {
+    const context = {
+      currentNode: null,
+      childIndex: 0,
+      parent: null,
+      nodeTransforms: [
+        _transformElement,
+        _transformText,
+        _transformRoot
+      ],
+      replaceNode(node) {
+        context.currentNode = node
+        context.parent.children[context.childIndex] = node
+      },
+      removeNode(node) {
+        if (context.parent) {
+          context.parent.children.splice(context.childIndex, 1)
+          context.currentNode = null
+        }
+      }
+    }
+
+    traverseNode(ast, context)
+  };
+  /**---------- Transformer End ---------------*/
+
+
+  /**---------- Generator Start ---------------*/
+  function genNodeList(nodes, context) {
+    const { push } = context
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i]
+      genNode(node, context)
+      if (i < nodes.length - 1) {
+        push(', ')
+      }
+    }
+  }
+  function genFunctionDecl(node, context) {
+    const { push, indent, deIndent } = context
+
+    push(`function ${node.id.name}`)
+    push(`(`)
+    genNodeList(node.params, context)
+    push(`)`)
+    push(`{`)
+    indent()
+
+    node.body.forEach(n => genNode(n, context))
+
+    deIndent()
+    push(`}`)
+  }
+  function genArrayExpression(node, context) {
+    const { push } = context
+    push('[')
+    genNodeList(node.elements, context)
+    push(']')
+  }
+
+  function genReturnStatement(node, context) {
+    const { push } = context
+    push('return ')
+    genNode(node.return, context)
+  }
+
+  function genStringLiteral(node, context) {
+    const { push } = context
+    push(`'${node.value}'`)
+  }
+
+  function genCallExpression(node, context) {
+    const { push } = context
+    const { callee, arguments } = node
+    push(`${callee.name}(`)
+    genNodeList(arguments, context)
+    push(')')
+  }
+
+  function genNode(node, context){
+    console.log('node', node.type)
+    switch (node.type) {
+      case 'FunctionDecl':
+        genFunctionDecl(node, context)
+        break;
+      case 'StringLiteral':
+        genStringLiteral(node, context)
+        break
+      case 'ReturnStatement':
+        genReturnStatement(node, context)
+        break;
+      case 'CallExpression':
+        genCallExpression(node, context)
+        break;
+      case 'ArrayExpression':
+        genArrayExpression(node, context)
+        break
+    }
+  }
+  const generate = (ast) => {
+    const context = {
+      code: '',
+      push(code) {
+        context.code += code
+      },
+      currentIndent: 0,
+      newline() {
+        context.code += '\n' + `  `.repeat(context.currentIndent)
+      },
+      // 缩进
+      indent() {
+        context.currentIndent++
+        context.newline()
+      },
+      // 取消缩进
+      deIndent() {
+        context.currentIndent--
+        context.newline()
+      }
+    }
+
+    genNode(ast.jsNode, context)
+
+    return context.code
+  };
+
+  /**---------- Generator End ---------------*/
+
+  const template = `<div><p>VueTemplate</p><span>Compiler</span></div>`;
+
+  const main = () => {
+    /*
+      {
+        "type": "Root",
+        "children": [
+            {
+                "type": "Element",
+                "tag": "div",
+                "children": [
+                    {
+                        "type": "Element",
+                        "tag": "p",
+                        "children": [
+                            {
+                                "type": "Text",
+                                "content": "VueTemplate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    */
+    const ast = parse(template.trim())
+    transform(ast)
+    console.log('new ast', ast)
+
+    const code = generate(ast)
+
+    /*
+      function render(){
+        return h('div', [h('p', 'VueTemplate'), h('span', 'Compiler')])
+      }
+    */
+    console.log('generate code', code)
+  };
+
+  main();
+</script>

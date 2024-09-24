@@ -1,0 +1,212 @@
+<div id="app"></div>
+
+<script>
+  // current active effect
+  let activeEffect
+  const effectStack = []
+
+  const cleanup = (effectFn) => {
+    if (!effectFn?.deps?.length) return
+    for(let i = 0; i<effectFn.deps.length; i++) {
+      const deps = effectFn.deps[i]
+      deps.delete(effectFn)
+    }
+    effectFn.deps.length = 0
+  }
+
+  const effect = (fn, options = {}) => {
+    const effectFn = () => {
+      let value
+      try {
+        console.log('trigger effect!')
+        cleanup(effectFn)
+        activeEffect = effectFn
+        effectStack.push(effectFn)
+        value = fn()
+      } catch (e) {
+        console.error(e)
+      } finally {
+        effectStack.pop()
+        // 指向下一个effect
+        activeEffect = effectStack[effectStack.length - 1]
+      }
+      return value
+    }
+    
+    // options挂到fn上
+    effectFn.options = options
+    // 副作用函数关联的依赖
+    effectFn.deps = []
+
+    if (!options?.lazy) {
+      effectFn()
+    }
+
+    return effectFn
+  };
+
+
+  // 存放依赖关系的桶
+  const bucket = new WeakMap()
+
+  const track = (target, key) => {
+    if (!activeEffect) return
+    let depsMap = bucket.get(target)
+    if (!depsMap) {
+      bucket.set(target, (depsMap = new Map()))
+    }
+    let deps = depsMap.get(key)
+    if (!deps) {
+      depsMap.set(key, (deps = new Set()))
+    }
+    deps.add(activeEffect)
+    activeEffect.deps.push(deps)
+  };
+
+  const trigger = (target, key) => {
+    const depsMap = bucket.get(target)
+    if (!depsMap) return
+    const effects = depsMap.get(key)
+    // 嵌套effect会导致无限执行，所以需要copy一份
+    const effectsToRun = new Set()
+    effects && effects.forEach(e => {
+      if (e !== activeEffect) {
+        effectsToRun.add(e)
+      }
+    })
+    effectsToRun.forEach(fn => {
+      if (fn.options?.scheduler) {
+        // 调度执行
+        fn.options.scheduler(fn)
+      } else {
+        fn()
+      }
+    })
+  };
+
+  const rawData = { a: 1, b: { c: 2 } }
+  const proxyData = new Proxy(rawData, {
+    get(target, key, receiver) {
+      track(target, key)
+      return Reflect.get(target, key, receiver)
+    },
+    set(target, key, value, receiver) {
+      Reflect.set(target, key, value, receiver)
+      trigger(target, key)
+    }
+  })
+
+
+  /* watch & computed */
+
+  const computed = (getter) => {
+    let value
+    let isDirty = true
+
+    const effectFn = effect(getter, {
+      lazy: true,
+      // 依赖的数据更新时, 触发scheduler
+      scheduler() {
+        if (!isDirty) {
+          isDirty = true
+          // 手动trigger触发副作用更新 比如视图等
+          trigger(computedObj, 'value')
+        }
+        isDirty = true
+      }
+    })
+
+    const computedObj = {
+      get value() {
+        if (isDirty) {
+          value = effectFn()
+          isDirty = false
+        }
+        // 手动追踪依赖
+        track(computedObj, 'value')
+        return value
+      }
+    }
+
+    return computedObj
+  };
+
+
+  const watch = (source, cb, options = {}) => {
+    let getter
+    if (typeof source === 'function') {
+      getter = source
+    } else {
+      getter = () => traverse(source)
+    }
+
+    let oldV, newV
+
+    let cleanup
+    const onInvalidate = (fn) => {
+      cleanup = fn
+    }
+
+
+    const job = () => {
+      newV = effectFn()
+      // 处理竞态问题
+      cleanup && cleanup()
+      cb(newV, oldV)
+      oldV = newV
+    }
+
+    const effectFn = effect(
+      () => getter(), 
+      {
+        lazy: true,
+        scheduler() {
+          if (options.flush === 'post') {
+            // 放到微任务中执行
+            const p = Promise.resolve()
+            p.then(job)
+          } else {
+            job()
+          }
+        }
+      }
+  )
+
+    if (options.immediate) {
+      job()
+    } else {
+      // 手动调用一次, 拿到旧值
+      oldV = effectFn()
+    }
+  };
+
+
+
+  /* utils */
+  // 递归遍历每一个值
+  function traverse(obj, seen = new Set()) {
+    if (typeof obj !== 'object' || obj === null || seen.has(obj)) {
+      return
+    }
+    seen.add(value)
+    for (const k in obj) {
+      traverse(obj[k], seen)
+    }
+    return obj
+  }
+
+
+
+  /* test code */
+  console.log('proxyData', proxyData)
+  watch(
+    () => proxyData.a,
+    (v1, v2) => {
+      console.log(v1, v2)
+    }
+  )
+  const num = computed(() => proxyData.a + proxyData.b.c);
+  console.log('computed num old:', num.value)
+  proxyData.a++;
+  console.log('computed num new:', num.value)
+</script>
