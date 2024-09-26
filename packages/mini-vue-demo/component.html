@@ -1,0 +1,130 @@
+<div id="app"></div>
+
+<script>
+  function h(tag, props, children) {
+    return { tag, props, children };
+  }
+
+  const MyComponent = {
+    name: 'Comp',
+    data() {
+      return {
+        msg: 'hello'
+      }
+    },
+    render() {
+      return h('div', null, `${this.msg} world`)
+    }
+  }
+
+  const ComponentVNode = {
+    type: MyComponent,
+    // 组件定义的Props
+    props: {
+      title: '你好'
+    },
+    children: {
+      header() {
+        return h('h1', '你好')
+      },
+      content() {
+        return h('p', 'content')
+      }
+    }
+  }
+
+  // 模板中插槽内容会被编译成如下render函数
+  function templateRender() {
+    return [
+      {
+        type: 'header',
+        children: [this.$slots.header()]
+      },
+      {
+        type: 'content',
+        children: [this.$slots.content()]
+      }
+    ]
+  }
+
+  function mountComponent(vnode, container, anchor) {
+    const compOptions = vnode.type
+    let { render, data, setup, props: propsOption, beforeCreate, onCreated } = compOptions
+
+    beforeCreate && beforeCreate()
+
+    const state = data ? reactive(data()) : null
+    const [props, attrs] = resolveProps(propsOption, vnode.props)
+
+    const slots = vnode.children || {}
+
+    const instance = {
+      state,
+      props: shallowReactive(props),
+      isMounted: false,
+      subTree: null,
+      slots,
+      mounted: [],
+    }
+
+    const setupContext = { attrs, emit, slots }
+
+    const setupResult = setup(shallowReadonly(instance.props), setupContext)
+
+    let setupState = null
+
+    // setup返回渲染函数
+    if (typeof setupResult === 'function') {
+      if (render) console.error('setup 函数返回渲染函数，render 选项将被忽略')
+      render = setupResult
+    } else {
+      setupState = setupResult
+    }
+
+    vnode.component = instance
+
+    onCreated && onCreated()
+
+    const renderContext = new Proxy(instance, {
+      get(t, k, r) {
+        const { state, props, slots } = t
+        if (k === '$slots') return slots
+
+        if (state && k in state) {
+          return state[k]
+        }
+
+        if (props && k in props) {
+          return props[k]
+        }
+
+        if (setupState && k in setupState) {
+          return setupState[k]
+        }
+      },
+      set(t, k, v, r) {
+        const { state, props } = t
+        
+        if (state && k in state) {
+          state[k] = v
+        } else if (props && k in props) {
+          console.warn('cant mutation props directly')
+        } else if (setupState && k in setupState) {
+          setupState[k] = v
+        }
+      }
+    })
+
+
+    effect(() => {
+      const subTree = render.call(renderContext, renderContext)
+      if (!instance.isMounted) {
+        instance.mounted?.length && instance.mounted.forEach(hook => hook.call(renderContext))
+      } else {
+        // update
+      }
+
+      instance.subTree = subTree      
+    })
+  };
+</script>
