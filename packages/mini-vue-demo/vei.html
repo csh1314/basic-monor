@@ -1,0 +1,68 @@
+<div id="app"></div>
+
+<script>
+  // Vue事件系统
+  // vue event invoker
+  // 核心思想: 避免多次 addEventListener 和 removeEventListener 的dom操作带来性能消耗
+  // 1. vnode._vei: 本质上是一个对象, 缓存该节点绑定的各种事件类型的invoker
+  // 2. invoker: 给实际绑定的事件包了一层, 放到invoker.value上, 永远执行的是invoker.value
+  // 3. 当绑定的事件更新时, 不需要重新解绑/绑定事件, 直接改变 invoker.value 的指向即可
+
+  const vnode = {
+    type: 'button',
+    props: {
+      onClick: [
+        () => {
+          console.log('click 1')
+        },
+        () => {
+          console.log('click 2')
+        }
+      ],
+      onMouseOver: () => {
+        console.log('mouse over!')
+      }
+    },
+    children: '按钮'
+  };
+
+  function patchProps(el, key, prevValue, nextValue) {
+    // 如果是事件
+    if (/^on/.test(key)) {
+      // 使用对象: 同一个节点可能绑定多个不同类型的事件
+      const invokers = el._vei || (el._vei = {})
+
+      let invoker = invokers[key]
+      const eventName = key.slice(2).toLowerCase()
+      if (nextValue) {
+        // 是首次挂载事件
+        if (!invoker) {
+          // 实际执行的永远是invoker.value
+          invoker = el._vei[key] = (e) => {
+            // 若触发时间早于事件绑定时间，则不执行
+            if (e.timeStamp < invoker.attached) return
+
+            // 兼容支持多次绑定同一个事件
+            if (Array.isArray(invoker.value)) {
+              invoker.value.forEach(fn => fn(e))
+            } else {
+              invoker.value(e)
+            }
+          }
+          invoker.value = nextValue
+
+          invoker.attached = Performance.now()
+
+          el.addEventListener(eventName, invoker)
+        } else {
+          invoker.value = nextValue
+        }
+      } else if (invoker) {
+        // 新的事件不存在，卸载事件
+        el.removeEventListener(eventName, invoker)
+      }
+    } else if (key === 'class') {
+      // 处理props中的class...
+    }
+  };
+</script>
